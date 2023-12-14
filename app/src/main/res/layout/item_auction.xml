@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/auctionImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/imagem_do_leilao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_indisponivel" />
+
+
+    <TextView
+        android:id="@+id/auctionDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/highestBidder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/auctionImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Playstatio 4" />
+
+    <TextView
+        android:id="@+id/highestBidder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lines="1"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/auctionDescription"
+        app:layout_constraintStart_toStartOf="@+id/auctionDescription"
+        app:layout_constraintTop_toBottomOf="@+id/auctionDescription"
+        tools:text="R$ 100,00" />
+</androidx.constraintlayout.widget.ConstraintLayout>
